@@ -1,22 +1,41 @@
 package mz.study.service;
 
-import java.util.List;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import mz.study.domain.entity.AcademyEntity;
+import mz.study.domain.dto.AbstractDto;
+import mz.study.domain.dto.AcademyDto;
 import mz.study.domain.repository.AcademyRepository;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
 
 @Slf4j
 @Service
 @RequiredArgsConstructor
-public class AcademyService {
+public class AcademyService implements SimpleServiceFacade {
 
-	private final AcademyRepository academyRepository;
+    private final AcademyRepository academyRepository;
 
-	public void test() {
-		List<AcademyEntity> all = academyRepository.findAll();
-		log.info(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 호출 테스트");
-		log.info(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> {}", all);
-	}
+    @Override
+    public AcademyDto find(long seq) {
+        return academyRepository.findById(seq)
+                .map(entity -> AbstractDto.toDto(AcademyDto.class, entity))
+                .orElse(new AcademyDto());
+    }
+
+    @Override
+    public List<Object> findAll() {
+        return null;
+    }
+
+    @Override
+    public Object save(Object entity) {
+        return null;
+    }
+
+    @Override
+    public void delete(long seq) {
+
+    }
 }
