@@ -1,0 +1,7 @@
+dependencies {
+    api project(":study-domain")
+
+    implementation 'javax.transaction:javax.transaction-api'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+}

@@ -1,0 +1,2 @@
+## Academy Controller Test
+GET http://localhost:8080/v1/study/academy
