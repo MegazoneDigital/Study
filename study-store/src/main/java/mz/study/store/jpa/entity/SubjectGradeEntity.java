@@ -18,15 +18,15 @@ public class SubjectGradeEntity extends DomainEntityJpo {
 
 	private String subjectId;
 
-	private int gradle;
+	private int grade;
 
 	public SubjectGradeEntity(SubjectGrade subjectGrade) {
 		this.subjectId = subjectGrade.getSubjectId();
-		this.gradle = subjectGrade.getGrade();
+		this.grade = subjectGrade.getGrade();
 	}
 
 	public SubjectGrade toDomain() {
 
-		return new SubjectGrade(this.subjectId, this.gradle);
+		return new SubjectGrade(this.subjectId, this.grade);
 	}
 }

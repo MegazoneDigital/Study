@@ -6,7 +6,7 @@ docker pull mariadb
 docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root --name mariadb mariadb 
 docker exec -ti mariadb /bash/bash
 mysql --protocol=tcp -hlocalhost -P3306 -uroot -proot
-MariaDB> CREATE DATABASE hr DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+MariaDB> CREATE DATABASE study DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ```
 
 MariaDB 접속 정보

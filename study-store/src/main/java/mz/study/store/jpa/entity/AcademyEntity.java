@@ -1,6 +1,5 @@
 package mz.study.store.jpa.entity;
 
-
 import javax.persistence.Entity;
 
 import lombok.AllArgsConstructor;

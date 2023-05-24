@@ -17,7 +17,7 @@ import javax.persistence.Entity;
 @Entity(name = "teacher")
 public class TeacherEntity extends DomainEntityJpo {
 
-	private long academyId;
+	private String academyId;
 
 	private String name;
 

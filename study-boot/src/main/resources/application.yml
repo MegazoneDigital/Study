@@ -1,6 +1,3 @@
-server:
-  port: 8080
-
 spring:
   profiles:
     group:
@@ -12,7 +9,7 @@ spring:
     activate:
       on-profile: common
   application:
-    name: mzStudy
+    name: Study
   main:
     allow-bean-definition-overriding: true
   flyway:
@@ -38,6 +35,9 @@ spring:
     properties:
       hibernate:
         format_sql: true
+
+server:
+  port: 8080
 
 logging:
   level:
