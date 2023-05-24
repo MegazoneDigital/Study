@@ -1,5 +1,6 @@
-rootProject.name = 'mzStudy'
+rootProject.name = 'Study'
 include 'study-boot'
 include 'study-domain'
 include 'study-service'
 include 'study-api'
+include 'study-store'

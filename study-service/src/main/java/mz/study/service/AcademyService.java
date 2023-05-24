@@ -2,40 +2,46 @@ package mz.study.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import mz.study.domain.dto.AbstractDto;
+import mz.common.api.ApiResponse;
+import mz.common.api.ApiResponseGenerator;
+import mz.common.domain.NameValueList;
 import mz.study.domain.dto.AcademyDto;
-import mz.study.domain.repository.AcademyRepository;
+import mz.study.domain.entity.Academy;
+import mz.study.store.AcademyStore;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Slf4j
 @Service
 @RequiredArgsConstructor
-public class AcademyService implements SimpleServiceFacade {
+public class AcademyService{
 
-    private final AcademyRepository academyRepository;
+    private final AcademyStore academyStore;
 
-    @Override
-    public AcademyDto find(long seq) {
-        return academyRepository.findById(seq)
-                .map(entity -> AbstractDto.toDto(AcademyDto.class, entity))
-                .orElse(new AcademyDto());
+    public String registerAcademy(AcademyDto academyDto) {
+
+        return academyStore.create(academyDto.toDomain());
     }
 
-    @Override
-    public List<Object> findAll() {
-        return null;
+    public void modifyAcademy(String id, NameValueList nameValues) {
+        Academy academy = academyStore.findAcademy(id);
+        academy.modifyValues(nameValues);
+        academyStore.update(academy);
     }
 
-    @Override
-    public Object save(Object entity) {
-        return null;
+    public void removeAcademy(String id) {
+
+        academyStore.delete(id);
     }
 
-    @Override
-    public void delete(long seq) {
+    public Academy findAcademy(String id) {
 
+        return academyStore.findAcademy(id);
+    }
+
+    public List<Academy> findAllAcademy() {
+
+        return academyStore.findAll();
     }
 }

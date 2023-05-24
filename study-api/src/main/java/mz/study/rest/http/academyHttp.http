@@ -1,0 +1,6 @@
+## Academy Controller Test
+POST http://localhost:8080/v1/academies
+PUT http://localhost:8080/v1/academies
+DELTE http://localhost:8080/v1/academies/1
+GET http://localhost:8080/v1/academies/1
+GET http://localhost:8080/v1/academies
