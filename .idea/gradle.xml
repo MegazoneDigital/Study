@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/academy-course" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/academy-course" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/academy-login" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/academy-login" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/academy-management" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/academy-management" />
+            <option value="$PROJECT_DIR$/academy-management/management-api" />
+            <option value="$PROJECT_DIR$/academy-management/management-boot" />
+            <option value="$PROJECT_DIR$/academy-management/management-domain" />
+            <option value="$PROJECT_DIR$/academy-management/management-service" />
+            <option value="$PROJECT_DIR$/academy-management/management-store" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

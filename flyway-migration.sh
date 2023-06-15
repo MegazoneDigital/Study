@@ -1,1 +1,0 @@
-./gradlew flywayClean flywayBaseline flywayMigrate
