@@ -1,0 +1,25 @@
+buildscript {
+  dependencies {
+    classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootGradlePluginVersion}")
+  }
+}
+
+plugins {
+  id 'org.springframework.boot' version "${springBootVersion}"
+}
+
+apply plugin: "java"
+
+dependencies {
+  api project(':usergate-api')
+
+//    implementation 'org.flywaydb:flyway-core:7.12.0'
+//    implementation 'mysql:mysql-connector-java:8.0.26'
+  implementation 'org.mariadb.jdbc:mariadb-java-client:3.0.6'
+  implementation('org.springframework.boot:spring-boot-starter-data-jpa')
+  implementation('org.springframework.boot:spring-boot-starter-web')
+}
+
+configurations.all {
+  resolutionStrategy.cacheChangingModulesFor 0, "seconds"
+}

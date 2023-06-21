@@ -1,6 +1,0 @@
-rootProject.name = "management"
-include 'management-boot'
-include 'management-domain'
-include 'management-service'
-include 'management-api'
-include 'management-store'

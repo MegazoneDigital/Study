@@ -1,0 +1,8 @@
+package mz.course.application.store.jpa.repository;
+
+import mz.course.application.store.jpa.entity.CoursePlanningEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CoursePlanningRepository extends JpaRepository<CoursePlanningEntity, String> {
+
+}

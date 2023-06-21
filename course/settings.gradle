@@ -1,0 +1,6 @@
+rootProject.name = "course"
+include 'course-boot'
+include 'course-domain'
+include 'course-service'
+include 'course-api'
+include 'course-store'

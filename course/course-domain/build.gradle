@@ -1,0 +1,19 @@
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, "seconds"
+}
+
+dependencies {
+
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId group
+            artifactId project.name
+            version version
+
+            from components.java
+        }
+    }
+}

@@ -1,0 +1,6 @@
+rootProject.name = "usergate"
+include 'usergate-boot'
+include 'usergate-domain'
+include 'usergate-service'
+include 'usergate-api'
+include 'usergate-store'

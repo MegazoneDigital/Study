@@ -1,0 +1,6 @@
+rootProject.name = "academy"
+include 'academy-boot'
+include 'academy-domain'
+include 'academy-service'
+include 'academy-api'
+include 'academy-store'

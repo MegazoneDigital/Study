@@ -2,10 +2,70 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/management-boot/management.management-boot.main.iml" filepath="$PROJECT_DIR$/.idea/modules/management-boot/management.management-boot.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/management-domain/management.management-domain.main.iml" filepath="$PROJECT_DIR$/.idea/modules/management-domain/management.management-domain.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/management-service/management.management-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/management-service/management.management-service.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/management-store/management.management-store.main.iml" filepath="$PROJECT_DIR$/.idea/modules/management-store/management.management-store.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/academy.iml" filepath="$PROJECT_DIR$/.idea/modules/academy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/academy-api/academy.academy-api.iml" filepath="$PROJECT_DIR$/.idea/modules/academy-api/academy.academy-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/academy-api/academy.academy-api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/academy-api/academy.academy-api.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/academy-api/academy.academy-api.test.iml" filepath="$PROJECT_DIR$/.idea/modules/academy-api/academy.academy-api.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/academy-boot/academy.academy-boot.iml" filepath="$PROJECT_DIR$/.idea/modules/academy-boot/academy.academy-boot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/academy-boot/academy.academy-boot.main.iml" filepath="$PROJECT_DIR$/.idea/modules/academy-boot/academy.academy-boot.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/academy-boot/academy.academy-boot.test.iml" filepath="$PROJECT_DIR$/.idea/modules/academy-boot/academy.academy-boot.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/academy-domain/academy.academy-domain.iml" filepath="$PROJECT_DIR$/.idea/modules/academy-domain/academy.academy-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/academy-domain/academy.academy-domain.main.iml" filepath="$PROJECT_DIR$/.idea/modules/academy-domain/academy.academy-domain.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/academy-domain/academy.academy-domain.test.iml" filepath="$PROJECT_DIR$/.idea/modules/academy-domain/academy.academy-domain.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/academy-service/academy.academy-service.iml" filepath="$PROJECT_DIR$/.idea/modules/academy-service/academy.academy-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/academy-service/academy.academy-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/academy-service/academy.academy-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/academy-service/academy.academy-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/academy-service/academy.academy-service.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/academy-store/academy.academy-store.iml" filepath="$PROJECT_DIR$/.idea/modules/academy-store/academy.academy-store.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/academy-store/academy.academy-store.main.iml" filepath="$PROJECT_DIR$/.idea/modules/academy-store/academy.academy-store.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/academy-store/academy.academy-store.test.iml" filepath="$PROJECT_DIR$/.idea/modules/academy-store/academy.academy-store.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course.iml" filepath="$PROJECT_DIR$/.idea/modules/course.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-application.iml" filepath="$PROJECT_DIR$/.idea/modules/course-application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-application-api/course-application.course-application-api.iml" filepath="$PROJECT_DIR$/.idea/modules/course-application-api/course-application.course-application-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-application-api/course-application.course-application-api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/course-application-api/course-application.course-application-api.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-application-api/course-application.course-application-api.test.iml" filepath="$PROJECT_DIR$/.idea/modules/course-application-api/course-application.course-application-api.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-application-boot/course-application.course-application-boot.iml" filepath="$PROJECT_DIR$/.idea/modules/course-application-boot/course-application.course-application-boot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-application-boot/course-application.course-application-boot.main.iml" filepath="$PROJECT_DIR$/.idea/modules/course-application-boot/course-application.course-application-boot.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-application-boot/course-application.course-application-boot.test.iml" filepath="$PROJECT_DIR$/.idea/modules/course-application-boot/course-application.course-application-boot.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-application-domain/course-application.course-application-domain.iml" filepath="$PROJECT_DIR$/.idea/modules/course-application-domain/course-application.course-application-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-application-domain/course-application.course-application-domain.main.iml" filepath="$PROJECT_DIR$/.idea/modules/course-application-domain/course-application.course-application-domain.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-application-domain/course-application.course-application-domain.test.iml" filepath="$PROJECT_DIR$/.idea/modules/course-application-domain/course-application.course-application-domain.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-application-service/course-application.course-application-service.iml" filepath="$PROJECT_DIR$/.idea/modules/course-application-service/course-application.course-application-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-application-service/course-application.course-application-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/course-application-service/course-application.course-application-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-application-service/course-application.course-application-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/course-application-service/course-application.course-application-service.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-application-store/course-application.course-application-store.iml" filepath="$PROJECT_DIR$/.idea/modules/course-application-store/course-application.course-application-store.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-application-store/course-application.course-application-store.main.iml" filepath="$PROJECT_DIR$/.idea/modules/course-application-store/course-application.course-application-store.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-application-store/course-application.course-application-store.test.iml" filepath="$PROJECT_DIR$/.idea/modules/course-application-store/course-application.course-application-store.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-api/course.course-api.iml" filepath="$PROJECT_DIR$/.idea/modules/course-api/course.course-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-api/course.course-api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/course-api/course.course-api.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-api/course.course-api.test.iml" filepath="$PROJECT_DIR$/.idea/modules/course-api/course.course-api.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-boot/course.course-boot.iml" filepath="$PROJECT_DIR$/.idea/modules/course-boot/course.course-boot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-boot/course.course-boot.main.iml" filepath="$PROJECT_DIR$/.idea/modules/course-boot/course.course-boot.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-boot/course.course-boot.test.iml" filepath="$PROJECT_DIR$/.idea/modules/course-boot/course.course-boot.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-domain/course.course-domain.iml" filepath="$PROJECT_DIR$/.idea/modules/course-domain/course.course-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-domain/course.course-domain.main.iml" filepath="$PROJECT_DIR$/.idea/modules/course-domain/course.course-domain.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-domain/course.course-domain.test.iml" filepath="$PROJECT_DIR$/.idea/modules/course-domain/course.course-domain.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-service/course.course-service.iml" filepath="$PROJECT_DIR$/.idea/modules/course-service/course.course-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-service/course.course-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/course-service/course.course-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-service/course.course-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/course-service/course.course-service.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-store/course.course-store.iml" filepath="$PROJECT_DIR$/.idea/modules/course-store/course.course-store.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-store/course.course-store.main.iml" filepath="$PROJECT_DIR$/.idea/modules/course-store/course.course-store.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/course-store/course.course-store.test.iml" filepath="$PROJECT_DIR$/.idea/modules/course-store/course.course-store.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/usergate.iml" filepath="$PROJECT_DIR$/.idea/modules/usergate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/usergate-api/usergate.usergate-api.iml" filepath="$PROJECT_DIR$/.idea/modules/usergate-api/usergate.usergate-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/usergate-api/usergate.usergate-api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/usergate-api/usergate.usergate-api.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/usergate-api/usergate.usergate-api.test.iml" filepath="$PROJECT_DIR$/.idea/modules/usergate-api/usergate.usergate-api.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/usergate-boot/usergate.usergate-boot.iml" filepath="$PROJECT_DIR$/.idea/modules/usergate-boot/usergate.usergate-boot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/usergate-boot/usergate.usergate-boot.main.iml" filepath="$PROJECT_DIR$/.idea/modules/usergate-boot/usergate.usergate-boot.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/usergate-boot/usergate.usergate-boot.test.iml" filepath="$PROJECT_DIR$/.idea/modules/usergate-boot/usergate.usergate-boot.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/usergate-domain/usergate.usergate-domain.iml" filepath="$PROJECT_DIR$/.idea/modules/usergate-domain/usergate.usergate-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/usergate-domain/usergate.usergate-domain.main.iml" filepath="$PROJECT_DIR$/.idea/modules/usergate-domain/usergate.usergate-domain.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/usergate-domain/usergate.usergate-domain.test.iml" filepath="$PROJECT_DIR$/.idea/modules/usergate-domain/usergate.usergate-domain.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/usergate-service/usergate.usergate-service.iml" filepath="$PROJECT_DIR$/.idea/modules/usergate-service/usergate.usergate-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/usergate-service/usergate.usergate-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/usergate-service/usergate.usergate-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/usergate-service/usergate.usergate-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/usergate-service/usergate.usergate-service.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/usergate-store/usergate.usergate-store.iml" filepath="$PROJECT_DIR$/.idea/modules/usergate-store/usergate.usergate-store.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/usergate-store/usergate.usergate-store.main.iml" filepath="$PROJECT_DIR$/.idea/modules/usergate-store/usergate.usergate-store.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/usergate-store/usergate.usergate-store.test.iml" filepath="$PROJECT_DIR$/.idea/modules/usergate-store/usergate.usergate-store.test.iml" />
     </modules>
   </component>
 </project>

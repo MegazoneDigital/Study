@@ -4,31 +4,70 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/academy-course" />
+        <option name="delegatedBuild" value="true" />
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/academy" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/academy-course" />
+            <option value="$PROJECT_DIR$/academy" />
+            <option value="$PROJECT_DIR$/academy/academy-api" />
+            <option value="$PROJECT_DIR$/academy/academy-boot" />
+            <option value="$PROJECT_DIR$/academy/academy-domain" />
+            <option value="$PROJECT_DIR$/academy/academy-service" />
+            <option value="$PROJECT_DIR$/academy/academy-store" />
           </set>
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/academy-login" />
+        <option name="delegatedBuild" value="true" />
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/course" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/academy-login" />
+            <option value="$PROJECT_DIR$/course" />
+            <option value="$PROJECT_DIR$/course/course-api" />
+            <option value="$PROJECT_DIR$/course/course-boot" />
+            <option value="$PROJECT_DIR$/course/course-domain" />
+            <option value="$PROJECT_DIR$/course/course-service" />
+            <option value="$PROJECT_DIR$/course/course-store" />
           </set>
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/academy-management" />
+        <option name="delegatedBuild" value="true" />
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/course-application" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/academy-management" />
-            <option value="$PROJECT_DIR$/academy-management/management-api" />
-            <option value="$PROJECT_DIR$/academy-management/management-boot" />
-            <option value="$PROJECT_DIR$/academy-management/management-domain" />
-            <option value="$PROJECT_DIR$/academy-management/management-service" />
-            <option value="$PROJECT_DIR$/academy-management/management-store" />
+            <option value="$PROJECT_DIR$/course-application" />
+            <option value="$PROJECT_DIR$/course-application/course-application-api" />
+            <option value="$PROJECT_DIR$/course-application/course-application-boot" />
+            <option value="$PROJECT_DIR$/course-application/course-application-domain" />
+            <option value="$PROJECT_DIR$/course-application/course-application-service" />
+            <option value="$PROJECT_DIR$/course-application/course-application-store" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="delegatedBuild" value="true" />
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/usergate" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/usergate" />
+            <option value="$PROJECT_DIR$/usergate/usergate-api" />
+            <option value="$PROJECT_DIR$/usergate/usergate-boot" />
+            <option value="$PROJECT_DIR$/usergate/usergate-domain" />
+            <option value="$PROJECT_DIR$/usergate/usergate-service" />
+            <option value="$PROJECT_DIR$/usergate/usergate-store" />
           </set>
         </option>
       </GradleProjectSettings>
