@@ -10,5 +10,6 @@ public interface AccountStore {
     void update(Account account);
     void delete(String id);
     Account findAccount(String id);
+
     List<Account> findAll();
 }

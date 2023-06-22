@@ -4,13 +4,16 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import mz.common.util.json.JsonSerializable;
 import mz.usergate.domain.entity.Account;
+
+import java.io.Serializable;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class AccountDto {
+public class AccountDto implements JsonSerializable, Serializable {
 
 	private String loginId;
 

@@ -10,15 +10,19 @@ import org.springframework.beans.BeanUtils;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(uniqueConstraints = {
+		@UniqueConstraint(name = "uxAccountLoginIdPassword",
+				columnNames = { "loginId", "password" }) })
 @Entity(name = "Account")
 public class AccountEntity extends DomainEntityJpo {
 
-	@Column(unique = true)
 	private String loginId;
 
 	private String password;

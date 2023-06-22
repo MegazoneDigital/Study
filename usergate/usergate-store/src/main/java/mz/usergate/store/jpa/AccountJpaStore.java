@@ -18,6 +18,8 @@ public class AccountJpaStore implements AccountStore {
 
     @Override
     public String create(Account account) {
+
+        //if( accountRepository.findByLoginIdAndPassword(account.getLoginId(), account.))
         return null;
     }
 

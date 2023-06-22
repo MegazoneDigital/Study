@@ -2,7 +2,9 @@ package mz.usergate.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import mz.common.util.security.PasswordEncoder;
 import mz.usergate.domain.dto.AccountDto;
+import mz.usergate.domain.dto.LoginDto;
 import mz.usergate.domain.entity.Account;
 import mz.usergate.store.AccountStore;
 import org.springframework.stereotype.Service;
@@ -16,7 +18,12 @@ public class AccountService {
 
     public String registerAccount(AccountDto accountDto) {
 
-        return accountStore.create(accountDto.toDomain());
+        PasswordEncoder encoder = new PasswordEncoder();
+        Account account = accountDto.toDomain();
+        account.setEmail(
+                encoder.encode(accountDto.getPassword())
+        );
+        return accountStore.create(account);
     }
 
     public void modifyAccount(AccountDto accountDto) {
