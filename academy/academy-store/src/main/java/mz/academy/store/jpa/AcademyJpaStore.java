@@ -3,7 +3,7 @@ package mz.academy.store.jpa;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import mz.academy.domain.entity.Academy;
-import mz.academy.store.AcademyStore;
+import mz.academy.store.DefaultStore;
 import mz.academy.store.jpa.entity.AcademyEntity;
 import mz.academy.store.jpa.repository.AcademyRepository;
 import org.springframework.beans.BeanUtils;
@@ -16,7 +16,7 @@ import java.util.Optional;
 @Slf4j
 @Repository
 @RequiredArgsConstructor
-public class AcademyJpaStore implements AcademyStore {
+public class AcademyJpaStore implements DefaultStore<Academy> {
 
     private final AcademyRepository academyRepository;
 

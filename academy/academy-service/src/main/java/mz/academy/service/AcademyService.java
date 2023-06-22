@@ -2,10 +2,10 @@ package mz.academy.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import mz.common.domain.NameValueList;
 import mz.academy.domain.dto.AcademyDto;
 import mz.academy.domain.entity.Academy;
-import mz.academy.store.AcademyStore;
+import mz.academy.store.DefaultStore;
+import mz.common.domain.NameValueList;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class AcademyService{
 
-    private final AcademyStore academyStore;
+    private final DefaultStore<Academy> academyStore;
 
     public String registerAcademy(AcademyDto academyDto) {
 
