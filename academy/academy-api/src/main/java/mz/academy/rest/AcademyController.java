@@ -1,19 +1,17 @@
 package mz.academy.rest;
 
 import lombok.RequiredArgsConstructor;
+import mz.academy.domain.dto.AcademyDto;
+import mz.academy.domain.entity.Academy;
 import mz.academy.event.EventProducer;
+import mz.academy.service.AcademyFacade;
+import mz.academy.service.AcademyService;
 import mz.common.api.ApiResponse;
 import mz.common.api.ApiResponseGenerator;
 import mz.common.domain.NameValueList;
-import mz.academy.domain.dto.AcademyDto;
-import mz.academy.domain.entity.Academy;
-import mz.academy.service.AcademyFacade;
-import mz.academy.service.AcademyService;
-import mz.common.domain.event.AccountRegisteredEvent;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.UUID;
 
 @RequestMapping("/v1/academies")
 @RequiredArgsConstructor
@@ -26,14 +24,6 @@ public class AcademyController implements AcademyFacade {
 	@Override
 	@PostMapping
 	public ApiResponse<String> registerAcademy(AcademyDto academyDto) {
-
-		AccountRegisteredEvent event = new AccountRegisteredEvent(
-				UUID.randomUUID().toString(),
-				academyDto.getName(),
-				academyDto.getPhone(),
-				academyDto.getEmail()
-		);
-		eventProducer.produceAccountRegisteredEvent(event);
 
 		return ApiResponseGenerator.success(academyService.registerAcademy(academyDto));
 	}
