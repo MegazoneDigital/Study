@@ -46,7 +46,7 @@ public class AcademyJpaStore implements BaseStore<Academy> {
     }
 
     @Override
-    public Academy findAcademy(String id) {
+    public Academy findById(String id) {
         //
         Optional<AcademyEntity> optAcademyEntity = academyRepository.findById(id);
         if(optAcademyEntity.isEmpty()) {

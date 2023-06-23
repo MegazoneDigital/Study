@@ -23,7 +23,7 @@ public class AcademyService{
     }
 
     public void modifyAcademy(String id, NameValueList nameValues) {
-        Academy academy = academyStore.findAcademy(id);
+        Academy academy = academyStore.findById(id);
         academy.modifyValues(nameValues);
         academyStore.update(academy);
     }
@@ -35,7 +35,7 @@ public class AcademyService{
 
     public Academy findAcademy(String id) {
 
-        return academyStore.findAcademy(id);
+        return academyStore.findById(id);
     }
 
     public List<Academy> findAllAcademy() {

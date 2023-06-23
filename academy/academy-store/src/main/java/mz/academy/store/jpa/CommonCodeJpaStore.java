@@ -46,7 +46,7 @@ public class CommonCodeJpaStore implements BaseStore<CommonCode> {
 	}
 
 	@Override
-	public CommonCode findAcademy(String id) {
+	public CommonCode findById(String id) {
 		Optional<CommonCodeEntity> optCommonCodeEntity = commonCodeRepository.findById(id);
 		if (optCommonCodeEntity.isEmpty()) {
 			throw new EntityNotFoundException();

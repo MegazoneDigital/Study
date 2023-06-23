@@ -1,6 +1,8 @@
 package mz.course.application.store.jpa.entity;
 
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.stream.Collectors;
 import javax.persistence.Entity;
 
 import lombok.AllArgsConstructor;
@@ -39,6 +41,11 @@ public class CourseEntity extends DomainEntityJpo {
 	public CourseEntity(Course course) {
 
 		BeanUtils.copyProperties(course, this);
+	}
+
+	public static List<Course> toDomains(List<CourseEntity> courseEntities) {
+		return courseEntities.stream().map(CourseEntity::toDomain)
+				.collect(Collectors.toList());
 	}
 
 	public Course toDomain() {

@@ -45,7 +45,7 @@ public class TeacherJpaStore implements BaseStore<Teacher> {
 	}
 
 	@Override
-	public Teacher findAcademy(String id) {
+	public Teacher findById(String id) {
 		Optional<TeacherEntity> optTeacherEntity = teacherRepository.findById(id);
 		if(optTeacherEntity.isEmpty()) {
 			throw new EntityNotFoundException();

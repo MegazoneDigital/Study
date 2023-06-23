@@ -46,7 +46,7 @@ public class StudentJpaStore implements BaseStore<Student> {
 	}
 
 	@Override
-	public Student findAcademy(String id) {
+	public Student findById(String id) {
 
 		Optional<StudentEntity> optStudentEntity = studentRepository.findById(id);
 		if(optStudentEntity.isEmpty()) {

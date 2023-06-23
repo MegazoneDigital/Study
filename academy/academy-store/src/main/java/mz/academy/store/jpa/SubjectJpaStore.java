@@ -46,7 +46,7 @@ public class SubjectJpaStore implements BaseStore<Subject> {
 	}
 
 	@Override
-	public Subject findAcademy(String id) {
+	public Subject findById(String id) {
 
 		Optional<SubjectEntity> optSubjectEntity = subjectRepository.findById(id);
 		if(optSubjectEntity.isEmpty()) {

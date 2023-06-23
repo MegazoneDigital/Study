@@ -46,7 +46,7 @@ public class ManagerJpaStore implements BaseStore<Manager> {
 	}
 
 	@Override
-	public Manager findAcademy(String id) {
+	public Manager findById(String id) {
 
 		Optional<ManagerEntity> optManagerEntity = managerRepository.findById(id);
 		if(optManagerEntity.isEmpty()) {

@@ -1,10 +1,9 @@
-package mz.academy.store;
+package mz.course.application.store;
 
 import java.util.List;
 
 public interface BaseStore<T> {
 
-	//
 	String create(T domain);
 
 	void update(T domain);

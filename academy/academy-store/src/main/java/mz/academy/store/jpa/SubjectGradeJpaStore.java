@@ -46,7 +46,7 @@ public class SubjectGradeJpaStore implements BaseStore<SubjectGrade> {
 	}
 
 	@Override
-	public SubjectGrade findAcademy(String id) {
+	public SubjectGrade findById(String id) {
 
 		Optional<SubjectGradeEntity> optSubjectGradeEntity = subjectGradeRepository.findById(id);
 		if(optSubjectGradeEntity.isEmpty()) {
