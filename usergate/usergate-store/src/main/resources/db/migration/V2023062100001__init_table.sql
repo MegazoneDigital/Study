@@ -11,5 +11,5 @@ create table account
     update_user       VARCHAR(36)     COMMENT '수정자',
     update_date       DATETIME(6)     COMMENT '수정일시',
     PRIMARY KEY (id),
-    constraint ux_account_login_id unique (login_id)
+    constraint ux_account_login_id_password unique (login_id, password)
 );

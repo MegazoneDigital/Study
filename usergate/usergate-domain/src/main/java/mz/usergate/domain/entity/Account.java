@@ -17,4 +17,11 @@ public class Account extends DomainEntity {
 	private String password;
 
 	private String email;
+
+	public Account(String id, String loginId, String password, String email) {
+		super(id);
+		this.loginId = loginId;
+		this.password = password;
+		this.email = email;
+	}
 }
