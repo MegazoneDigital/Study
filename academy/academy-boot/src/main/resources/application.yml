@@ -1,7 +1,13 @@
 spring:
   profiles:
     group:
-      default: common
+      default: common, kafka
+
+---
+spring:
+  profiles:
+    group:
+      local: common, non-kafka
 
 ---
 spring:
@@ -9,7 +15,7 @@ spring:
     activate:
       on-profile: common
   application:
-    name: Academy
+    name: academy
   main:
     allow-bean-definition-overriding: true
   flyway:
@@ -43,3 +49,23 @@ logging:
   level:
     root: info
     mz.hr: debug
+
+---
+spring:
+  config:
+    activate:
+      on-profile: kafka
+  cloud:
+    stream:
+      bindings:
+        accountRegistered:
+          destination: account-registered-topic
+---
+spring:
+  config:
+    activate:
+      on-profile: non-kafka
+  autoconfigure:
+    exclude:
+      - org.springframework.cloud.stream.config.BindingServiceConfiguration
+      - org.springframework.cloud.stream.function.FunctionConfiguration

@@ -1,7 +1,12 @@
 spring:
   profiles:
     group:
-      default: common
+      default: common, kafka
+---
+spring:
+  profiles:
+    group:
+      local: common, non-kafka
 
 ---
 spring:
@@ -9,7 +14,7 @@ spring:
     activate:
       on-profile: common
   application:
-    name: Usergate
+    name: usergate
   main:
     allow-bean-definition-overriding: true
   flyway:
@@ -36,6 +41,10 @@ spring:
       hibernate:
         format_sql: true
 
+  messages:
+    basename: message/messages
+    encoding: UTF-8
+
 server:
   port: 8088
 
@@ -43,3 +52,39 @@ logging:
   level:
     root: info
     mz.hr: debug
+
+---
+spring:
+  config:
+    activate:
+      on-profile: kafka
+  cloud:
+    function:
+      definition: accountRegistered;
+    stream:
+      kafka:
+        binder:
+          brokers: kafka:9092
+      bindings:
+        accountRegistered-in-0:
+          destination: account-registered-topic
+          group: ${spring.application.name}Group
+
+---
+spring:
+  config:
+    activate:
+      on-profile: non-kafka
+  autoconfigure:
+    exclude:
+      - org.springframework.cloud.stream.config.BindingServiceConfiguration
+      - org.springframework.cloud.stream.function.FunctionConfiguration
+
+#---
+#spring:
+#  config:
+#    activate:
+#      on-profile: redis
+#  session:
+#    store-type: redis
+#    timeout: 30m         # => 기본값 30분
