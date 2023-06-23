@@ -6,10 +6,9 @@ import java.util.List;
 
 public interface AccountStore {
     //
-    String create(Account account);
-    void update(Account account);
+    String save(Account account);
     void delete(String id);
     Account findAccount(String id);
 
-    List<Account> findAll();
+    List<Account> findByLoginId(String loginId);
 }

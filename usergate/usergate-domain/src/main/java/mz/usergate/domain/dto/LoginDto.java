@@ -1,18 +1,20 @@
 package mz.usergate.domain.dto;
 
-import lombok.*;
-import lombok.extern.slf4j.Slf4j;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import mz.common.util.json.JsonSerializable;
 
 import java.io.Serializable;
 
-@Slf4j
-@Getter @Setter
-@ToString
+
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class LoginDto implements JsonSerializable, Serializable {
     //
-    private String email;
+    private String loginId;
     private String password;
 }
