@@ -1,22 +1,21 @@
 package mz.academy.store.jpa;
 
+import java.util.List;
+import java.util.Optional;
+import javax.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import mz.academy.domain.entity.Academy;
-import mz.academy.store.DefaultStore;
+import mz.academy.store.BaseStore;
 import mz.academy.store.jpa.entity.AcademyEntity;
 import mz.academy.store.jpa.repository.AcademyRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Repository;
 
-import javax.persistence.EntityNotFoundException;
-import java.util.List;
-import java.util.Optional;
-
 @Slf4j
 @Repository
 @RequiredArgsConstructor
-public class AcademyJpaStore implements DefaultStore<Academy> {
+public class AcademyJpaStore implements BaseStore<Academy> {
 
     private final AcademyRepository academyRepository;
 

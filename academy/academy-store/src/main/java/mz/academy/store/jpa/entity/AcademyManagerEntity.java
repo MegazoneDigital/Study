@@ -1,17 +1,15 @@
 package mz.academy.store.jpa.entity;
 
 
+import java.util.List;
+import java.util.stream.Collectors;
+import javax.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import mz.academy.domain.entity.Academy;
-import mz.common.domain.entity.DomainEntityJpo;
 import mz.academy.domain.entity.AcademyManager;
-
-import javax.persistence.Entity;
-import java.util.List;
-import java.util.stream.Collectors;
+import mz.common.domain.entity.DomainEntityJpo;
 
 @Getter
 @Setter
