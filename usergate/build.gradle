@@ -3,7 +3,7 @@ plugins {
 }
 
 ext {
-  studyVersion = '0.0.1-SNAPSHOT'
+  usergateVersion = '0.1.0-SNAPSHOT'
   commonVersion = "0.5.0-SNAPSHOT"
   queryDslVersion = '4.4.0'
 
@@ -14,8 +14,8 @@ ext {
 }
 
 allprojects {
-  group 'mz.study'
-  version studyVersion
+  group 'mz'
+  version usergateVersion
 }
 
 configurations.all {
