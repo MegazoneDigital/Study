@@ -9,7 +9,7 @@ spring:
     activate:
       on-profile: common
   application:
-    name: Course
+    name: course
   main:
     allow-bean-definition-overriding: true
   flyway:
