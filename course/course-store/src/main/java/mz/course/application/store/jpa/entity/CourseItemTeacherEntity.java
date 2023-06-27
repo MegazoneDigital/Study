@@ -1,5 +1,7 @@
 package mz.course.application.store.jpa.entity;
 
+import java.util.List;
+import java.util.stream.Collectors;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,6 +25,12 @@ public class CourseItemTeacherEntity extends DomainEntityJpo {
 	public CourseItemTeacherEntity(CourseItemTeacher courseItemTeacher) {
 		this.courseItemId = courseItemTeacher.getCourseItemId();
 		this.teacherId = courseItemTeacher.getTeacherId();
+	}
+
+	public static List<CourseItemTeacher> toDomains(
+			List<CourseItemTeacherEntity> itemTeacherEntities) {
+		return itemTeacherEntities.stream().map(CourseItemTeacherEntity::toDomain)
+				.collect(Collectors.toList());
 	}
 
 	public CourseItemTeacher toDomain() {

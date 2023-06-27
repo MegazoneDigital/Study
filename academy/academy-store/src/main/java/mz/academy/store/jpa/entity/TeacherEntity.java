@@ -1,5 +1,7 @@
 package mz.academy.store.jpa.entity;
 
+import java.util.List;
+import java.util.stream.Collectors;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -32,6 +34,11 @@ public class TeacherEntity extends DomainEntityJpo {
 	public TeacherEntity(Teacher teacher) {
 
 		BeanUtils.copyProperties(this, teacher);
+	}
+
+	public static List<Teacher> toDomains(List<TeacherEntity> teacherEntities) {
+		return teacherEntities.stream().map(TeacherEntity::toDomain)
+				.collect(Collectors.toList());
 	}
 
 	public Teacher toDomain() {

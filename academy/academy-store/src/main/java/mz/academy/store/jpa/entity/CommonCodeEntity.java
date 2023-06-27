@@ -1,5 +1,7 @@
 package mz.academy.store.jpa.entity;
 
+import java.util.List;
+import java.util.stream.Collectors;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 
@@ -38,5 +40,10 @@ public class CommonCodeEntity extends DomainEntityJpo {
 		CommonCode commonCode = new CommonCode();
 		BeanUtils.copyProperties(this, commonCode);
 		return commonCode;
+	}
+
+	public static List<CommonCode> toDomains(List<CommonCodeEntity> commonCodeEntities) {
+		return commonCodeEntities.stream().map(CommonCodeEntity::toDomain)
+				.collect(Collectors.toList());
 	}
 }
