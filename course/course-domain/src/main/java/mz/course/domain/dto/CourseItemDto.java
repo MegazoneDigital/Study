@@ -11,13 +11,13 @@ public class CourseItemDto {
 
 	private String courseId;
 
-	private String courseDay;
+	private int courseDay;
 
 	private String coursePeriod;
 
-	private LocalDateTime startTime;
+	private String startTime;
 
-	private LocalDateTime endTime;
+	private String endTime;
 
 	private int minNumber;
 

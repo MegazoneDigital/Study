@@ -12,6 +12,7 @@ apply plugin: "java"
 
 dependencies {
   api project(':course-api')
+  api ("mz:mz-common-redis:${commonVersion}")
 
 //    implementation 'org.flywaydb:flyway-core:7.12.0'
 //    implementation 'mysql:mysql-connector-java:8.0.26'
