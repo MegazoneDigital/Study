@@ -1,7 +1,12 @@
 spring:
   profiles:
     group:
-      default: common
+      default: common, redis, dev
+---
+spring:
+  profiles:
+    group:
+      local: common
 
 ---
 spring:
@@ -37,9 +42,35 @@ spring:
         format_sql: true
 
 server:
-  port: 8081
+  port: 9081
 
 logging:
   level:
     root: info
-    mz.hr: debug
+    mz.course: debug
+
+---
+spring:
+  config:
+    activate:
+      on-profile: redis
+  session:
+    store-type: redis
+    timeout: 30m         # => 기본값 30분
+  cache:
+    type: redis
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  redis:
+    session:
+      host: 127.0.0.1
+      port: 6379
+      password: redis1234
+    cache:
+      host: 127.0.0.1
+      port: 6379
+      password: redis1234

@@ -1,7 +1,5 @@
 package mz.course.domain.entity;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,6 +7,8 @@ import lombok.Setter;
 import mz.common.domain.NameValue;
 import mz.common.domain.NameValueList;
 import mz.common.domain.entity.DomainEntity;
+
+import java.time.DayOfWeek;
 
 @Getter
 @Setter
@@ -18,17 +18,29 @@ public class CourseItem extends DomainEntity {
 
 	private String courseId;
 
-	private String courseDay;
+	private DayOfWeek courseDay;
 
 	private String coursePeriod;
 
-	private LocalDateTime startTime;
+	private String startTime;
 
-	private LocalDateTime endTime;
+	private String endTime;
 
 	private int minNumber;
 
 	private int maxNumber;
+
+
+	public CourseItem(String courseId, int courseDay, String coursePeriod,
+					  String startTime, String endTime, int minNumber, int maxNumber) {
+		this.courseId = courseId;
+		this.courseDay = DayOfWeek.of(courseDay);
+		this.coursePeriod = coursePeriod;
+		this.startTime = startTime;
+		this.endTime = endTime;
+		this.minNumber = minNumber;
+		this.maxNumber = maxNumber;
+	}
 
 	public void modifyValues(NameValueList nameValues) {
 		for (NameValue nameValue : nameValues.list()) {
@@ -38,18 +50,16 @@ public class CourseItem extends DomainEntity {
 					this.courseId = value;
 					break;
 				case "courseDay":
-					this.courseDay = value;
+					this.courseDay = DayOfWeek.of(Integer.parseInt(value));
 					break;
 				case "coursePeriod":
 					this.coursePeriod = value;
 					break;
 				case "startTime":
-					this.startTime = LocalDateTime.parse(value,
-							DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+					this.startTime = value;
 					break;
 				case "endTime":
-					this.endTime = LocalDateTime.parse(value,
-							DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+					this.endTime = value;
 					break;
 				case "minNumber":
 					this.minNumber = Integer.parseInt(value);

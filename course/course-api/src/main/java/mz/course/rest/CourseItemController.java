@@ -1,4 +1,4 @@
-package mz.academy.rest;
+package mz.course.rest;
 
 import java.util.List;
 import lombok.RequiredArgsConstructor;

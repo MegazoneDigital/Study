@@ -1,9 +1,13 @@
 package mz.course.application.store.jpa.entity;
 
+import java.time.DayOfWeek;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -22,13 +26,15 @@ public class CourseItemEntity extends DomainEntityJpo {
 
 	private String courseId;
 
-	private String courseDay;
+	@Column(name = "course_day", columnDefinition = "TINYINT")
+	@Enumerated(EnumType.ORDINAL)
+	private DayOfWeek courseDay;
 
 	private String coursePeriod;
 
-	private LocalDateTime startTime;
+	private String startTime;
 
-	private LocalDateTime endTime;
+	private String endTime;
 
 	private int minNumber;
 
