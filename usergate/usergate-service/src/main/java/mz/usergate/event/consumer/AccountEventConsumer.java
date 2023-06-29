@@ -2,9 +2,9 @@ package mz.usergate.event.consumer;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import mz.common.domain.event.AccountRegisteredEvent;
 import mz.common.util.json.JsonUtils;
 import mz.usergate.domain.dto.AccountDto;
-import mz.usergate.domain.event.AccountRegisteredEvent;
 import mz.usergate.service.AccountService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

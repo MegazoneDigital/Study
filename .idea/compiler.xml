@@ -8,12 +8,12 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.20/18bcea7d5df4d49227b4a0743a536208ce4825bb/lombok-1.18.20.jar" />
         </processorPath>
-        <module name="usergate.usergate-service.test" />
-        <module name="usergate.usergate-service.main" />
-        <module name="usergate.usergate-store.test" />
-        <module name="usergate.usergate-domain.main" />
-        <module name="usergate.usergate-boot.main" />
-        <module name="usergate.usergate-api.main" />
+        <module name="course-application.course-application-boot.main" />
+        <module name="course-application.course-application-domain.main" />
+        <module name="course-application.course-application-service.main" />
+        <module name="course-application.course-application-store.test" />
+        <module name="course-application.course-application-api.main" />
+        <module name="course-application.course-application-service.test" />
       </profile>
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />
@@ -36,7 +36,7 @@
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.18.2-GA/1180a90fbad732b60fb728a6bbe8fcb3151423d7/javassist-3.18.2-GA.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/annotations/2.0.1/9ef6656259841cebfb9fb0697bb122ada4485498/annotations-2.0.1.jar" />
         </processorPath>
-        <module name="usergate.usergate-store.main" />
+        <module name="course-application.course-application-store.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11" />

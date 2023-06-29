@@ -1,7 +1,7 @@
 spring:
   profiles:
     group:
-      default: common, kafka
+      default: common, kafka, redis, dev
 ---
 spring:
   profiles:
@@ -46,12 +46,12 @@ spring:
     encoding: UTF-8
 
 server:
-  port: 8088
+  port: 9088
 
 logging:
   level:
     root: info
-    mz.hr: debug
+    mz.usergate: debug
 
 ---
 spring:
@@ -80,11 +80,27 @@ spring:
       - org.springframework.cloud.stream.config.BindingServiceConfiguration
       - org.springframework.cloud.stream.function.FunctionConfiguration
 
-#---
-#spring:
-#  config:
-#    activate:
-#      on-profile: redis
-#  session:
-#    store-type: redis
-#    timeout: 30m         # => 기본값 30분
+---
+spring:
+  config:
+    activate:
+      on-profile: redis
+  session:
+    store-type: redis
+    timeout: 30m         # => 기본값 30분
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  redis:
+    session:
+      host: 127.0.0.1
+      port: 6379
+      password: redis1234
+    cache:
+      host: 127.0.0.1
+      port: 6379
+      password: redis1234
