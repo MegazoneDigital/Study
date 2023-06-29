@@ -1,13 +1,14 @@
 package mz.academy.rest;
 
 import lombok.RequiredArgsConstructor;
+import mz.academy.domain.dto.AcademyDto;
+import mz.academy.domain.entity.Academy;
+import mz.academy.event.EventProducer;
+import mz.academy.service.AcademyFacade;
+import mz.academy.service.AcademyService;
 import mz.common.api.ApiResponse;
 import mz.common.api.ApiResponseGenerator;
 import mz.common.domain.NameValueList;
-import mz.academy.domain.dto.AcademyDto;
-import mz.academy.domain.entity.Academy;
-import mz.academy.service.AcademyFacade;
-import mz.academy.service.AcademyService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,6 +19,7 @@ import java.util.List;
 public class AcademyController implements AcademyFacade {
 
 	private final AcademyService academyService;
+	private final EventProducer eventProducer;
 
 	@Override
 	@PostMapping

@@ -1,5 +1,7 @@
 package mz.academy.store.jpa.entity;
 
+import java.util.List;
+import java.util.stream.Collectors;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 
@@ -40,5 +42,10 @@ public class SubjectEntity extends DomainEntityJpo {
 		Subject subject = new Subject();
 		BeanUtils.copyProperties(this, subject);
 		return subject;
+	}
+
+	public static List<Subject> toDomains(List<SubjectEntity> subjectEntities) {
+		return subjectEntities.stream().map(SubjectEntity::toDomain)
+				.collect(Collectors.toList());
 	}
 }

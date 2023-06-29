@@ -1,16 +1,19 @@
 package mz.usergate.domain.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import mz.common.util.json.JsonSerializable;
 import mz.usergate.domain.entity.Account;
+
+import java.io.Serializable;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class AccountDto {
+@Builder
+public class AccountDto implements JsonSerializable, Serializable {
+
+	private String id;
 
 	private String loginId;
 
@@ -20,6 +23,6 @@ public class AccountDto {
 
 	public Account toDomain() {
 
-		return new Account(loginId, password, email);
+		return new Account(id, loginId, password, email);
 	}
 }

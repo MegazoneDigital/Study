@@ -1,5 +1,7 @@
 package mz.academy.store.jpa.entity;
 
+import java.util.List;
+import java.util.stream.Collectors;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,6 +25,11 @@ public class SubjectGradeEntity extends DomainEntityJpo {
 	public SubjectGradeEntity(SubjectGrade subjectGrade) {
 		this.subjectId = subjectGrade.getSubjectId();
 		this.grade = subjectGrade.getGrade();
+	}
+
+	public static List<SubjectGrade> toDomains(List<SubjectGradeEntity> subjectGradeEntities) {
+		return subjectGradeEntities.stream().map(SubjectGradeEntity::toDomain)
+				.collect(Collectors.toList());
 	}
 
 	public SubjectGrade toDomain() {

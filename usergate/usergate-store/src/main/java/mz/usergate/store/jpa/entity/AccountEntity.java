@@ -10,15 +10,21 @@ import org.springframework.beans.BeanUtils;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(uniqueConstraints = {
+		@UniqueConstraint(name = "uxAccountLoginIdPassword",
+				columnNames = { "loginId", "password" }) })
 @Entity(name = "Account")
 public class AccountEntity extends DomainEntityJpo {
 
-	@Column(unique = true)
 	private String loginId;
 
 	private String password;
@@ -34,5 +40,10 @@ public class AccountEntity extends DomainEntityJpo {
 		Account account = new Account();
 		BeanUtils.copyProperties(this, account);
 		return account;
+	}
+
+	public static List<Account> toDomains(List<AccountEntity> accountEntities) {
+
+		return accountEntities.stream().map(AccountEntity::toDomain).collect(Collectors.toList());
 	}
 }

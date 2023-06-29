@@ -1,14 +1,15 @@
 package mz.academy.store.jpa.entity;
 
 
+import java.util.List;
+import java.util.stream.Collectors;
+import javax.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import mz.common.domain.entity.DomainEntityJpo;
 import mz.academy.domain.entity.AcademyManager;
-
-import javax.persistence.Entity;
+import mz.common.domain.entity.DomainEntityJpo;
 
 @Getter
 @Setter
@@ -30,5 +31,11 @@ public class AcademyManagerEntity extends DomainEntityJpo {
 	public AcademyManager toDomain() {
 
 		return new AcademyManager(this.managerId, this.academyId);
+	}
+
+	public static List<AcademyManager> toDomains(List<AcademyManagerEntity> academyManagerEntities) {
+
+		return academyManagerEntities.stream().map(AcademyManagerEntity::toDomain)
+				.collect(Collectors.toList());
 	}
 }

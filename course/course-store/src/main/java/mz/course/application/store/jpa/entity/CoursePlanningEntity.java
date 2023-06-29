@@ -1,5 +1,7 @@
 package mz.course.application.store.jpa.entity;
 
+import java.util.List;
+import java.util.stream.Collectors;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -33,6 +35,11 @@ public class CoursePlanningEntity extends DomainEntityJpo {
 	public CoursePlanningEntity(CoursePlanning coursePlanning) {
 
 		BeanUtils.copyProperties(this, coursePlanning);
+	}
+
+	public static List<CoursePlanning> toDomains(List<CoursePlanningEntity> planningEntities) {
+		return planningEntities.stream().map(CoursePlanningEntity::toDomain)
+				.collect(Collectors.toList());
 	}
 
 	public CoursePlanning toDomain() {
